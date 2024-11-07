@@ -1,0 +1,23 @@
+server:
+  servlet:
+    context-path: /api/v1
+  port: 8080
+spring:
+  application:
+    name: quan_ly_ban_cafe
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/quan_ly_ban_cafe_database
+    username: root
+    password: sapassword
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MariaDBDialect
+jwt:
+  signerKey: "HQLyjPD33KkWH8TfqujcGD5tmn7C3E5mx+dmNNvGZdp8Y5X+OtOgzan7kohj2kSv"
+  valid-duration: 3600
+  refreshable-duration: 36000
